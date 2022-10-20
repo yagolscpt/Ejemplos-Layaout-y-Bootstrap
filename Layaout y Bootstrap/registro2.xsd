@@ -1,0 +1,67 @@
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+
+  <xs:element name="registro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="personas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!--un grupo de personas esta formado por usuarios
+  y empleados CODIGO DADO-->
+  <xs:group name="personas">
+    <xs:sequence>
+      <xs:element name="usuario" minOccurs="0" maxOccurs="unbounded" type="tipoUsuario"/>
+      <xs:element name="empleado" minOccurs="0" maxOccurs="unbounded" type="tipoEmpleado"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="tipoUsuario">
+    <xs:sequence>
+      <xs:element name="apellidos_nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-z]{1,30}[a-zA-Z]{1,20}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="asanz@jmail.com"/>
+            <xs:enumeration value="pruiz@jotmail.com"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element  name="conexiones"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="identificador" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="departamentoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="marketing"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empleadoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="apellidos_nombre"/>
+      <xs:element type="xs:string" name="email"/>
+      <xs:element type="xs:string" name="conexiones"/>
+      <xs:element type="departamentoType" name="departamento"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="identificador"/>
+  </xs:complexType>
+  <xs:complexType name="registroType">
+    <xs:sequence>
+      <xs:element type="usuarioType" name="usuario" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="empleadoType" name="empleado"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

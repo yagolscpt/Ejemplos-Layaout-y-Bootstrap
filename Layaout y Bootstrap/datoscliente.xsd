@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--parte del esquema que explica los datos-->
+<!--ADEMAS DECLARA UN ESPACIO DE NOMBRES PARA LOS MISMOS
+           xmlns:dat="http://www.avanzado.es/datos"
+           targetNamespace="http://www.avanzado.es/datos"
+           TODAS LAS REFERENCIAS DEBEN USAR dat:
+-->
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            xmlns:dat="http://www.avanzados.es/datoscli"
+            targetNamespace="http://www.avanzados.es/datoscli"
+            attributeFormDefault="unqualified">
+
+
+    <xs:element name="datos_cliente">
+      <xs:complexType>
+        <xs:sequence>
+            <xs:element type="xs:string" name="nombre"/>
+            <xs:element name="apellido" maxOccurs="unbounded" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="López"/>
+                        <xs:enumeration value="Jiménez"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="dni"/>
+            <xs:element type="xs:string" name="tfno"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="ident"/>
+      </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

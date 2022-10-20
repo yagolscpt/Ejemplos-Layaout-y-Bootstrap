@@ -1,0 +1,56 @@
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            xmlns:dat="http://www.avanzados.es/datoscli"
+            targetNamespace="http://www.avanzados.es/datos-factura"
+            attributeFormDefault="unqualified">
+
+    <xs:complexType name="actorType">
+    <xs:sequence>
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Juan"/>
+                <xs:enumeration value="Manuel"/>
+                <xs:enumeration value="Luis"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+
+
+
+
+    <xs:complexType name="actoresType">
+        <xs:sequence>
+            <xs:element type="actorType" name="actor" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="peliculaType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="titulo"/>
+            <xs:element type="xs:string" name="genero"/>
+            <xs:element type="xs:string" name="duracion"/>
+            <xs:element type="actoresType" name="actores"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id_pelicula"/>
+        <xs:attribute type="xs:string" name="valoracion"/>
+    </xs:complexType>
+    <xs:complexType name="peliculasType">
+        <xs:sequence>
+            <xs:element type="peliculaType" name="pelicula"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="alquileresType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="fecha"/>
+            <xs:element type="peliculasType" name="peliculas"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="datos_facturaType">
+        <xs:sequence>
+            <xs:element ref="dat:datos_cliente" />
+            <xs:element type="alquileresType" name="alquileres"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

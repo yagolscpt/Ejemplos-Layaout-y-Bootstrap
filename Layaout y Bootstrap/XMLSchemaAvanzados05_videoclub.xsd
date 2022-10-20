@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:dat="http://www.avanzados.es/datoscli"
+               xmlns:factu="http://www.avanzados.es/datos-factura"
+               elementFormDefault="qualified">
+
+  <xs:import namespace="http://www.avanzados.es/datoscli" schemaLocation="datoscliente.xsd"/>
+<xs:import namespace="http://www.avanzados.es/datos-factura" schemaLocation="factura.xsd"/>
+
+  <xs:element name="facturas" type="facturasType"/>
+
+  <xs:complexType name="resguardoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="forma_pago"/>
+      <xs:element type="xs:string" name="importe_total"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actorType">
+    <xs:sequence>
+      <xs:element name="nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Juan"/>
+            <xs:enumeration value="Manuel"/>
+            <xs:enumeration value="Luis"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="apellido" maxOccurs="unbounded" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Pardo"/>
+            <xs:enumeration value="López"/>
+            <xs:enumeration value="Bandera"/>
+            <xs:enumeration value="Garrido"/>
+            <xs:enumeration value="González"/>
+            <xs:enumeration value="Romero"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="facturaType">
+    <xs:sequence>
+      <xs:elemen ref="datos_clienteType" name="datos_cliente"/>
+      <xs:element type="datos_facturaType" name="datos_factura"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="facturasType">
+    <xs:sequence>
+      <xs:element type="facturaType" name="factura"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

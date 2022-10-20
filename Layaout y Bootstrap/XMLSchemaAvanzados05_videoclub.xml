@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fac:facturas  xmlns:dat="http://www.avanzados.es/datoscli"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://www.cebem.net XMLSchemaAvanzados05_videoclub.xsd">
+       <factura>
+            <dat:datos_cliente ident="abcd">
+                <dat:nombre>Juan</dat:nombre>
+                <dat:apellido>López</dat:apellido>
+                <dat:apellido>Jiménez</dat:apellido>
+                <dat:dni>11111111N</dat:dni>
+                <dat:tfno>123456789</dat:tfno>
+            </dat:datos_cliente>
+            <fac:datos_factura>
+                <fac:resguardo>
+                    <fac:forma_pago>
+                        Efectivo
+                    </fac:forma_pago>
+                    <fac:importe_total>
+                        1256325.23
+                    </fac:importe_total>
+                </fac:resguardo>
+                <fac:alquileres>
+                    <fac:fecha>2010-12-25</fac:fecha>
+                    <fac:peliculas>
+                        <fac:pelicula id_pelicula="ABC" valoracion="buena">
+                            <fac:titulo>El retorno del Jedi</fac:titulo>
+                            <fac:genero>Espacio</fac:genero>
+                            <fac:duracion>125</fac:duracion>
+                            <fac:actores>
+                                <fac:actor>
+                                    <fac:nombre>Juan</fac:nombre>
+                                    <fac:apellido>Pardo</fac:apellido>
+                                    <fac:apellido>López</fac:apellido>
+                                </fac:actor>
+                                <fac:actor>
+                                    <nombre>Manuel</nombre>
+                                    <apellido>Bandera</apellido>
+                                    <apellido>Garrido</apellido>
+                                </fac:actor>
+                                <actor>
+                                    <nombre>Luis</nombre>
+                                    <apellido>González</apellido>
+                                    <apellido>Romero</apellido>
+                                </actor>
+                            </fac:actores>
+                        </fac:pelicula>
+                    </fac:peliculas>
+                </fac:alquileres>
+            </fac:datos_factura>
+       </factura>
+</fac:facturas>

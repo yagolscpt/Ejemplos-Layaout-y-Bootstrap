@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.examen.net"
+           xmlns:disc="https://www.examen.net"
+           elementFormDefault="qualified">
+
+    <xs:element name="Oferta" type="disc:tipooferta"/>
+
+    <xs:complexType  name="tipooferta" >
+        <xs:sequence>
+            <xs:element type="disc:tipocd" name="cd" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipocd">
+        <xs:sequence>
+            <xs:element type="xs:string" name="titulo"/>
+            <xs:element type="xs:string" name="artista"/>
+            <xs:element type="xs:string" name="pais"/>
+            <xs:element type="xs:string" name="compañiadiscografica"/>
+            <xs:element type="xs:string" name="precio"/>
+            <xs:element type="xs:string" name="añopublicacion"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

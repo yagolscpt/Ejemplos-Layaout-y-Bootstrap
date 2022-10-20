@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<disc:Oferta  xmlns:disc="https://www.examen.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://www.examen.net ejercicio1tercera.xsd">
+    <disc:cd>
+        <disc:titulo>Still got the blues</disc:titulo>
+        <disc:artista>Gary Moore</disc:artista>
+        <disc:pais>UK</disc:pais>
+        <disc:compañiadiscografica>Virgin records</disc:compañiadiscografica>
+        <disc:precio>10.20</disc:precio>
+        <disc:añopublicacion>1990</disc:añopublicacion>
+    </disc:cd>
+    <disc:cd>
+        <disc:titulo>One nigth only</disc:titulo>
+        <disc:artista>Bee Gees</disc:artista>
+        <disc:pais>UK</disc:pais>
+        <disc:compañiadiscografica>Polydor</disc:compañiadiscografica>
+        <disc:precio>10.90</disc:precio>
+        <disc:añopublicacion>1998</disc:añopublicacion>
+    </disc:cd>
+    <disc:cd>
+        <disc:titulo>When a man loves a woman</disc:titulo>
+        <disc:artista>Percy Sledge</disc:artista>
+        <disc:pais>USA</disc:pais>
+        <disc:compañiadiscografica>Atlantic</disc:compañiadiscografica>
+        <disc:precio>8.70</disc:precio>
+        <disc:añopublicacion>1987</disc:añopublicacion>
+    </disc:cd>
+    <disc:cd>
+        <disc:titulo>Big Willie style</disc:titulo>
+        <disc:artista>Will Smith</disc:artista>
+        <disc:pais>USA</disc:pais>
+        <disc:compañiadiscografica>Columbia</disc:compañiadiscografica>
+        <disc:precio>9.90</disc:precio>
+        <disc:añopublicacion>1997</disc:añopublicacion>
+    </disc:cd>
+    <disc:cd>
+        <disc:titulo>La Cancion de Juan Perro</disc:titulo>
+        <disc:artista>Radio Futura</disc:artista>
+        <disc:pais>España</disc:pais>
+        <disc:compañiadiscografica>Sony Music-Ariola</disc:compañiadiscografica>
+        <disc:precio>9.90</disc:precio>
+        <disc:añopublicacion>1987</disc:añopublicacion>
+    </disc:cd>
+    <disc:cd>
+        <disc:titulo>The dock of the bay</disc:titulo>
+        <disc:artista>Otis Redding</disc:artista>
+        <disc:pais>USA</disc:pais>
+        <disc:compañiadiscografica>Atlantic</disc:compañiadiscografica>
+        <disc:precio>7.90</disc:precio>
+        <disc:añopublicacion>1987</disc:añopublicacion>
+    </disc:cd>
+</disc:Oferta>
